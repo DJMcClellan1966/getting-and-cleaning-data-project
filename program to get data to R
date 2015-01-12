@@ -1,0 +1,9 @@
+setwd("~/Desktop/coursera /getting-and-cleaning-data-project") ##set directory
+if(!file.exists("data")) {
+        dir.create("data") }  ## create if needed data file
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip " ##website
+download.file(fileUrl,destfile="./data/Dataset.zip", method="curl")
+unzip(zipfile="./data/Dataset.zip", exdir="./data")  ##unzip file
+        UCIHARdata <- file.path("./data", "UCI HAR Dataset") ## move files to UCI
+data <- list.files(UCIHARdata, recursive=TRUE)
+data
