@@ -7,3 +7,6 @@ unzip(zipfile="./data/Dataset.zip", exdir="./data")  ##unzip file
         UCIHARdata <- file.path("./data", "UCI HAR Dataset") ## move files to UCI
 data <- list.files(UCIHARdata, recursive=TRUE)
 data
+unlink(data)
+
+##Read data files into tables
