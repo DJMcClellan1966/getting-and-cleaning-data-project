@@ -1,4 +1,4 @@
-setwd("~/Desktop/coursera /getting-and-cleaning-data-project") ##set directory
+setwd("~/Desktop/coursera /getting-and-cleaning-data-project/data") ##set directory
 if(!file.exists("data")) {
         dir.create("data") }  ## create if needed data file
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip " ##website
