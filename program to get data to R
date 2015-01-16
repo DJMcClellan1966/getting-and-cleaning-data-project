@@ -1,12 +1,16 @@
-setwd("~/Desktop/coursera /getting-and-cleaning-data-project/data") ##set directory
-if(!file.exists("data")) {
-        dir.create("data") }  ## create if needed data file
-fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip " ##website
-download.file(fileUrl,destfile="./data/Dataset.zip", method="curl")
-unzip(zipfile="./data/Dataset.zip", exdir="./data")  ##unzip file
-        UCIHARdata <- file.path("./data", "UCI HAR Dataset") ## move files to UCI
-data <- list.files(UCIHARdata, recursive=TRUE)
-data
-unlink(data)
+setwd("~/Desktop/coursera /getting-and-cleaning-data-project")
+rm(list=ls())
 
-##Read data files into tables
+        fileurl <- tempfile()
+        download.file("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ",fileurl)
+        unzip(fileurl, list=TRUE)
+
+x_test <- read.table(unzip(fileurl, "UCI HAR Dataset/test/X_test.txt"))
+y_test <- read.table(unzip(fileurl, "UCI HAR Dataset/test/y_test.txt"))
+subject_test <- read.table(unzip(fileurl, "UCI HAR Dataset/test/subject_test.txt"))
+x_train <- read.table(unzip(fileurl, "UCI HAR Dataset/train/X_train.txt"))
+y_train <- read.table(unzip(fileurl, "UCI HAR Dataset/train/y_train.txt"))
+subject_test <- read.table(unzip(fileurl, "UCI HAR Dataset/train/subject_train.txt"))
+features <- read.table(unzip(fileurl, "UCI HAR Dataset/features.txt"))
+unlink(fileurl)
+
