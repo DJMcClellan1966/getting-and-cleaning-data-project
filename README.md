@@ -17,6 +17,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for       each activity and each subject.
 
 Began project by downloading zipped file with data to project files. After unzipping, I extracted data from files and saved to named files to work with using readme.txt to gather information about files.
+
 Assignment 1
  Began cleaning up the data by adding feature names to columns of x training and x test sets.  Then adding activity and participant data.
 Took the upated x train and x test sets and combined them by rows, removing duplicated rows to get combined Data set.
