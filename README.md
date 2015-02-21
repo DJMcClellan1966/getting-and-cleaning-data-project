@@ -10,9 +10,29 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
  You should create one R script called run_analysis.R that does the following. 
-Merges the training and the test sets to create one data set.
-Extracts only the measurements on the mean and standard deviation for each measurement. 
-Uses descriptive activity names to name the activities in the data set
-Appropriately labels the data set with descriptive variable names. 
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for       each activity and each subject.
+
+Began project by downloading zipped file with data to project files. After unzipping, I extracted data from files and saved to named files to work with using readme.txt to gather information about files.
+Assignment 1
+ Began cleaning up the data by adding feature names to columns of x training and x test sets.  Then adding activity and participant data.
+Took the upated x train and x test sets and combined them by rows, removing duplicated rows to get combined Data set.
+
+Assignment 2
+ Used the grep function to find the mean() and standard deviation in the Data adding some missed data to the mean.
+ 
+ Assignment 3
+  Using the activities_labels information to change the numeric identifier in the Data activity column to a named id,  for example("walking", "sitting", etc.)
+ 
+ Assignment 4
+  Using the gsub function to change the description activity names from shortened acronyms to more full and  descriptive names.  Then converting the Data to a character file, changed the numeric participant number to a more identifiable descriptive participant number. Example( 1 now equals particiant 1, etc.)
+  
+  Assignment 5
+   Tidied up the data.
+   
+ Thanks to Coursera forums, github and google search for providing helpful examples.  
+  
 
